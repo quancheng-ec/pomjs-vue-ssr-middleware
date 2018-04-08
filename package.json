@@ -1,0 +1,22 @@
+{
+  "name": "vue-ssr-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "zephyr",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-server-renderer": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "css-loader": "^0.28.11",
+    "happypack": "^4.0.1",
+    "koa": "^2.5.0",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.5.0",
+    "webpack-merge": "^4.1.2"
+  }
+}
