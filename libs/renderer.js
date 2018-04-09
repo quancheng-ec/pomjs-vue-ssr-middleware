@@ -1,5 +1,5 @@
-const Vue = require('vue')
-const { createRenderer } = require('vue-server-renderer')
+import Vue from 'vue'
+import { createRenderer } from 'vue-server-renderer'
 
 const TEMPLATE = `<!DOCTYPE html>
 <html lang="en">
@@ -34,11 +34,11 @@ const createRender = (appInstance, ctx) => {
   return renderer
 }
 
-exports.createAppStringRender = (app, ctx) => (context, options = {}) => {
+export const createAppStringRender = (app, ctx) => (context, options = {}) => {
   return createRender(app, ctx).renderToString(app, context)
 }
 
-exports.createAppStreamRender = (app, ctx) => (context, options = {}) => {
+export const createAppStreamRender = (app, ctx) => (context, options = {}) => {
   const stream = createRender(app, ctx).renderToStream(app, context)
 
   stream.on('data', data => {

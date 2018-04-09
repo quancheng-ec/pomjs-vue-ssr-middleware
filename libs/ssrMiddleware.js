@@ -1,8 +1,8 @@
-const { resolve } = require('path')
-const { createAppStreamRender, createAppStringRender } = require('./renderer')
-const { findBundle } = require('./bundleUtils')
+import { resolve } from 'path'
+import { createAppStreamRender, createAppStringRender } from './renderer'
+import { findBundle } from './bundleUtils'
 
-module.exports = (options = {}) => {
+export default (options = {}) => {
   const { mode = 'string', bundleDir } = options
 
   if (!bundleDir) throw new Error('no bundleDir provided')

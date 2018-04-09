@@ -1,9 +1,7 @@
-const Vue = require('vue')
-const { ssrMiddleware } = require('./libs/ssrMiddleware')
+import Vue from 'vue'
 
-exports.ssrMiddleware = ssrMiddleware
-
-exports.createApp = (App, context) => {
+export ssrMiddleware from './libs/ssrMiddleware'
+export const createApp = (App, context) => {
   const app = new Vue({
     name: 'main',
     render: h => h(App)

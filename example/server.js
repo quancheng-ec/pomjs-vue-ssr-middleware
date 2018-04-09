@@ -1,9 +1,10 @@
-const Koa = require('koa')
-const app = new Koa()
-const { resolve } = require('path')
+import Koa from 'koa'
+import { resolve } from 'path'
+import { ssrMiddleware } from '../index'
 
-const { ssrMiddleware } = require('../index')
-const App = require('./App')
+console.log(ssrMiddleware)
+
+const app = new Koa()
 
 app.use(
   ssrMiddleware({

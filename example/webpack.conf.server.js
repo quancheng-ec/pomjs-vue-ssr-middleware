@@ -6,15 +6,12 @@ const { DefinePlugin } = require('webpack')
 
 module.exports = merge(base, {
   target: 'node',
-  entry: {
-    app: resolve(__dirname, 'src/app.js')
-  },
-  devtool: '#eval-source-map',
+  devtool: '#source-map',
   output: {
+    path: resolve(__dirname, 'dist'),
     libraryTarget: 'commonjs2'
   },
   plugins: [
-    new VueSSRServerPlugin(),
     new DefinePlugin({
       'process.env': {
         VUE_ENV: JSON.stringify(process.env.VUE_ENV)
